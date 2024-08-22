@@ -1,0 +1,83 @@
+"use client";
+import React, { useState } from "react";
+
+interface CarouselItem {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
+const carouselItems: CarouselItem[] = [
+  {
+    src: "/assets/images/wood1.jpg",
+    alt: "Slide 1",
+    caption: "Kami Memberikan Prodak Terbaik Dari Indonesia",
+  },
+  {
+    src: "https://via.placeholder.com/1600x600?text=Slide+2",
+    alt: "Slide 2",
+    caption: "Slide 2",
+  },
+  {
+    src: "https://via.placeholder.com/1600x600?text=Slide+3",
+    alt: "Slide 3",
+    caption: "Slide 3",
+  },
+];
+
+const Carousel: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? carouselItems.length - 1 : prevIndex - 1,
+    );
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === carouselItems.length - 1 ? 0 : prevIndex + 1,
+    );
+  };
+
+  return (
+    <div className="relative w-full h-full overflow-hidden">
+      <div
+        className="flex transition-transform duration-500"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {carouselItems.map((item, index) => (
+          <div key={index} className="flex-shrink-0 w-full h-full relative">
+            <img
+              alt={item.alt}
+              className="w-full h-full object-cover"
+              src={item.src}
+            />
+            <div style={{ marginLeft: '300px', marginTop:'15px' }} className="absolute inset-0 flex items-center  p-8">
+              <div className=" text-white p-6 max-w-md flex flex-col items-start">
+                <h2 className="text-2xl font-bold mb-4">{item.caption}</h2>
+                <button className="bg-[#A1B986] hover:bg-[#5E8C52] text-white font-semibold py-2 px-4 rounded">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <button
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg"
+        onClick={prevSlide}
+      >
+        ‹
+      </button>
+      <button
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg"
+        onClick={nextSlide}
+      >
+        ›
+      </button>
+    </div>
+  );
+};
+
+export default Carousel;
