@@ -11,6 +11,7 @@
 	"dependencies": {
 		"@material-tailwind/react": "^2.1.9",
 		"@nextui-org/button": "2.0.37",
+		"@nextui-org/card": "^2.0.33",
 		"@nextui-org/code": "2.0.32",
 		"@nextui-org/input": "2.2.4",
 		"@nextui-org/kbd": "2.0.33",

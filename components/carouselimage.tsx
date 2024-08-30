@@ -11,17 +11,17 @@ const carouselItems: CarouselItem[] = [
   {
     src: "/assets/images/wood1.jpg",
     alt: "Slide 1",
-    caption: "Kami Memberikan Prodak Terbaik Dari Indonesia",
+    caption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
   },
   {
-    src: "https://via.placeholder.com/1600x600?text=Slide+2",
+    src: "/assets/images/wood1.jpg",
     alt: "Slide 2",
-    caption: "Slide 2",
+    caption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
   },
   {
-    src: "https://via.placeholder.com/1600x600?text=Slide+3",
+    src: "/assets/images/wood1.jpg",
     alt: "Slide 3",
-    caption: "Slide 3",
+    caption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
   },
 ];
 
@@ -53,9 +53,11 @@ const Carousel: React.FC = () => {
               className="w-full h-full object-cover"
               src={item.src}
             />
-            <div style={{ marginLeft: '300px', marginTop:'15px' }} className="absolute inset-0 flex items-center  p-8">
-              <div className=" text-white p-6 max-w-md flex flex-col items-start">
-                <h2 className="text-2xl font-bold mb-4">{item.caption}</h2>
+            <div className="absolute inset-0 flex items-center justify-start p-4 sm:p-8 md:p-12">
+              <div className="text-white  p-4 sm:p-6 max-w-md mx-auto">
+                <h2 className="text-xl sm:text-2xl font-bold mb-4 text-justify">
+                  {item.caption}
+                </h2>
                 <button className="bg-[#A1B986] hover:bg-[#5E8C52] text-white font-semibold py-2 px-4 rounded">
                   Learn More
                 </button>
@@ -65,13 +67,13 @@ const Carousel: React.FC = () => {
         ))}
       </div>
       <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 hidden md:block"
         onClick={prevSlide}
       >
         ‹
       </button>
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 hidden md:block"
         onClick={nextSlide}
       >
         ›
