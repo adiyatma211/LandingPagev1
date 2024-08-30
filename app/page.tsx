@@ -58,11 +58,13 @@ export default function Home() {
     <>
       <section id="hero">
         <div className="container-fluid h-full w-full">
-          <Carousel  />
+          <Carousel />
         </div>
       </section>
-
-      <section className="pt-20" id="AboutUs">
+      <section
+        className="pt-20 xs:pt-10 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36"
+        id="AboutUs"
+      >
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/2 flex justify-center md:justify-start">
@@ -76,7 +78,7 @@ export default function Home() {
               className="w-full md:w-1/2 md:ml-8 md:mb-20 flex flex-col justify-center"
               style={{ fontFamily: "Nunito Sans" }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-[#5E8C52] mb-4">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#5E8C52] mb-4 text-center">
                 Our Story
               </h2>
               <p className="text-base md:text-lg text-justify mb-4">

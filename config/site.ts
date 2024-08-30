@@ -1,28 +1,24 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + NextUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Sentosaku.id",
+  description: "Bersama Membangun Indonesia",
   navItems: [
     {
       label: "Home",
-      href: "/",
+      href: "#home",
     },
     {
-      label: "Docs",
-      href: "/docs",
+      label: "About Us",
+      href: "#AboutUs",
     },
     {
-      label: "Pricing",
-      href: "/pricing",
+      label: "Product",
+      href: "#product",
     },
     {
       label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
+      href: "#blog",
     },
   ],
   navMenuItems: [

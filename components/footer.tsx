@@ -7,7 +7,7 @@ export const Footer = () => {
         <div className="md:flex md:justify-between">
           <div className="mb-12 md:mb-4">
             <a
-              href="https://flowbite.com/"
+              href=" "
               className="flex flex-col items-center "
             >
               <LogoFooter className="mb-4" />
@@ -17,7 +17,7 @@ export const Footer = () => {
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            <div>
+            {/* <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Resources
               </h2>
@@ -36,7 +36,7 @@ export const Footer = () => {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Follow us
@@ -44,18 +44,26 @@ export const Footer = () => {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://github.com/themesberg/flowbite"
+                    href="https://www.instagram.com/sentosaku.id/"
                     className="hover:underline "
                   >
-                    Github
+                    Sentosaku.id
                   </a>
                 </li>
-                <li>
+                <li className="mb-4">
                   <a
-                    href="https://discord.gg/4eeurUVvTy"
+                    href="mailto:info@sentosaku.com"
                     className="hover:underline"
                   >
-                    Discord
+                    Email US
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="mailto:sales@sentosaku.com"
+                    className="hover:underline"
+                  >
+                    Our Marketing Officer
                   </a>
                 </li>
               </ul>
